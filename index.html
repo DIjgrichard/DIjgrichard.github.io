@@ -19,26 +19,30 @@
 	
 	<script>
 	
-	if(DI.WebPush.isSupported())
+	if(DI.WebPush.isSupported()){
 		console.log("Navigateur support webpush");
 		document.write("Navigateur support webpush");
-	else
+	}
+	else{
 		console.log("Navigateur ne support pas webpush");
 		document.write("Navigateur ne support pas webpush");
-		
-	if(DI.WebPush.isSubscribed())
+	}	
+	if(DI.WebPush.isSubscribed()){
 		console.log("WebPush autorisés");
 		document.write("WebPush autorisés");
-	else
+	}
+	else{
 		console.log("WebPush non autorisés");
 		document.write("WebPush non autorisés");
-	
-	if(DI.WebPush.isBlocked())
+	}	
+	if(DI.WebPush.isBlocked()){
 		console.log("WebPush bloqué");
 		document.write("WebPush bloqué");
-	else
+	}
+	else{
 		console.log("WebPush non bloqué");
 		document.write("WebPush non bloqué");
+	}
 		
 	</script>
 
