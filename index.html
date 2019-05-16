@@ -19,10 +19,20 @@
 	
 	<script>
 	
-		if(DI.WebPush.isSupported())
-			console.log("Navigateur support webpush");
-		else
-			console.log("Navigateur ne support pas webpush");
+	if(DI.WebPush.isSupported())
+		console.log("Navigateur support webpush");
+	else
+		console.log("Navigateur ne support pas webpush");
+		
+	if(DI.WebPush.isSubscribed())
+		console.log("WebPush autorisés");
+	else
+		console.log("WebPush non autorisés");
+	
+	if(DI.WebPush.isBlocked())
+		console.log("WebPush bloqué");
+	else
+		console.log("WebPush non bloqué");
 		
 	</script>
 
