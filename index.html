@@ -19,7 +19,7 @@
 	
 	<script>
 	
-		if(DI.WebPush.isSupported)
+		if(DI.WebPush.isSupported())
 			console.log("Navigateur support webpush");
 		else
 			console.log("Navigateur ne support pas webpush");
@@ -29,9 +29,9 @@
 <!--
 DI.WebPush.RequestPermission('LangCode')
 DI.WebPush.Identify('KeyFieldCode', 'value')
-DI.WebPush.isSupported
-DI.WebPush.isSubscribed
-DI.WebPush.isBlocked
+DI.WebPush.isSupported()
+DI.WebPush.isSubscribed()
+DI.WebPush.isBlocked()
 -->
 	
 	
