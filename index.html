@@ -2,15 +2,13 @@
 
 <html>
 <head>
-  <meta charset=utf-8 />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Demo...</title>
-	
-<script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-messaging.js"></script>
-<script src="https://lightspeed.dev.ofsys.com/T/OFC4/WPS/19269/11726/QZ5bkvHnBtpwDQKaZkYjXk2IwW86s1mn/DI.WebPush-min.js"></script>
+	<meta charset=utf-8 />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Demo...</title>
+	<script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-messaging.js"></script>
+	<script src="https://lightspeed.dev.ofsys.com/T/OFC4/WPS/19269/11726/QZ5bkvHnBtpwDQKaZkYjXk2IwW86s1mn/DI.WebPush-min.js"></script>
 </head>
-
 <body>
 	<label>Adresse courriel du contact</label>
 	<input id="email" type="text" style="width:300px;" />
@@ -18,5 +16,24 @@
 	<input type="button" value="Reset identification" onclick="DI.WebPush.ResetIdentify();" />
 	<br/>
 	<input type="button" value="Envoi du token" onclick="DI.WebPush.RequestPermission('fr');"  />
+	
+	<script>
+	
+		if(DI.WebPush.isSupported)
+			console.log("Navigateur support webpush");
+		else
+			console.log("Navigateur ne support pas webpush");
+		
+	</script>
+
+<!--
+DI.WebPush.RequestPermission('LangCode')
+DI.WebPush.Identify('KeyFieldCode', 'value')
+DI.WebPush.isSupported
+DI.WebPush.isSubscribed
+DI.WebPush.isBlocked
+-->
+	
+	
 </body>
 </html>
