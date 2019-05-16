@@ -21,27 +21,27 @@
 	
 	if(DI.WebPush.isSupported()){
 		console.log("Navigateur support webpush");
-		document.write("Navigateur support webpush<br>");
+		document.write("<br>Navigateur support webpush<br>");
 	}
 	else{
 		console.log("Navigateur ne support pas webpush");
-		document.write("Navigateur ne support pas webpush");
+		document.write("Navigateur ne support pas webpush<br>");
 	}	
 	if(DI.WebPush.isSubscribed()){
 		console.log("WebPush autorisés");
-		document.write("WebPush autorisés");
+		document.write("WebPush autorisé<br>s");
 	}
 	else{
 		console.log("WebPush non autorisés");
-		document.write("WebPush non autorisés");
+		document.write("WebPush non autorisés<br>");
 	}	
 	if(DI.WebPush.isBlocked()){
 		console.log("WebPush bloqué");
-		document.write("WebPush bloqué");
+		document.write("WebPush bloqué<br>");
 	}
 	else{
 		console.log("WebPush non bloqué");
-		document.write("WebPush non bloqué");
+		document.write("WebPush non bloqué<br>");
 	}
 		
 	</script>
