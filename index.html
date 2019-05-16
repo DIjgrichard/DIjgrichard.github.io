@@ -15,35 +15,37 @@
 	<input type="button" value="Identifier le contact" onclick="DI.WebPush.Identify('f_EMail', document.getElementById('email').value);" />
 	<input type="button" value="Reset identification" onclick="DI.WebPush.ResetIdentify();" />
 	<br/>
-	<input type="button" value="Envoi du token" onclick="DI.WebPush.RequestPermission('fr');"  />
+	<input type="button" value="Envoi du token" onclick="DI.WebPush.RequestPermission('fr');check();"  />
 	
 	<script>
-	
-	if(DI.WebPush.isSupported()){
-		console.log("Navigateur support webpush");
-		document.write("<br><br>Navigateur support webpush<br>");
+	function check()
+	{
+		if(DI.WebPush.isSupported()){
+			console.log("Navigateur support webpush");
+			document.write("<br><br>Navigateur support webpush<br>");
+		}
+		else{
+			console.log("Navigateur ne support pas webpush");
+			document.write("Navigateur ne support pas webpush<br>");
+		}	
+		if(DI.WebPush.isSubscribed()){
+			console.log("WebPush autorisés");
+			document.write("WebPush autorisés<br>");
+		}
+		else{
+			console.log("WebPush non autorisés");
+			document.write("WebPush non autorisés<br>");
+		}	
+		if(DI.WebPush.isBlocked()){
+			console.log("WebPush bloqué");
+			document.write("WebPush bloqué<br>");
+		}
+		else{
+			console.log("WebPush non bloqué");
+			document.write("WebPush non bloqué<br>");
+		}
 	}
-	else{
-		console.log("Navigateur ne support pas webpush");
-		document.write("Navigateur ne support pas webpush<br>");
-	}	
-	if(DI.WebPush.isSubscribed()){
-		console.log("WebPush autorisés");
-		document.write("WebPush autorisés<br>");
-	}
-	else{
-		console.log("WebPush non autorisés");
-		document.write("WebPush non autorisés<br>");
-	}	
-	if(DI.WebPush.isBlocked()){
-		console.log("WebPush bloqué");
-		document.write("WebPush bloqué<br>");
-	}
-	else{
-		console.log("WebPush non bloqué");
-		document.write("WebPush non bloqué<br>");
-	}
-		
+	check();	
 	</script>
 
 <!--
