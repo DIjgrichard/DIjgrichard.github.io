@@ -43,7 +43,15 @@
 		console.log("WebPush non bloqué");
 		document.write("DI.WebPush.isBlocked() : WebPush non bloqué<br>");
 	}
-	document.write("<br><br>User-agent header sent: " + navigator.userAgent);
+		
+	document.write("<p>Browser CodeName: " + navigator.appCodeName + "</p>");
+	document.write("<p>Browser Name: " + navigator.appName + "</p>");
+	document.write("<p>Browser Version: " + navigator.appVersion + "</p>");
+	document.write("<p>Cookies Enabled: " + navigator.cookieEnabled + "</p>");
+	document.write("<p>Browser Language: " + navigator.language + "</p>");
+	document.write("<p>Browser Online: " + navigator.onLine + "</p>");
+	document.write("<p>Platform: " + navigator.platform + "</p>");
+	document.write("<p>User-agent header: " + navigator.userAgent + "</p>");
 	</script>
 
 <!--
